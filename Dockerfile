@@ -1,4 +1,5 @@
-FROM nvidia/cuda:12.8.1-runtime-ubi9
+# nvidia/cuda:12.8.1-runtime-ubi9
+FROM docker.io/oliverrietmann/gpu_burn:latest
 
 WORKDIR /root
 
