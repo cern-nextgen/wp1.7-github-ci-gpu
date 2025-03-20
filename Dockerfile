@@ -1,4 +1,4 @@
-FROM registry.cern.ch/docker.io/rochaporto/gpu_burn:latest
+FROM nvidia/cuda:12.8.1-runtime-ubi9
 
 WORKDIR /root
 
