@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: cern-nextgen
+    container: docker.io/library/ubuntu:latest
 
     steps:
     - name: Checkout
