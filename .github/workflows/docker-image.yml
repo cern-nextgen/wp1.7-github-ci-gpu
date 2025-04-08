@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: cern-nextgen
     container:
-      image: docker:dind
-      options: --privileged
+      image: ghcr.io/catthehacker/ubuntu:act-latest
+      options: --privileged -v /var/run/docker.sock:/var/run/docker.sock
 
     steps:
     - name: Checkout
