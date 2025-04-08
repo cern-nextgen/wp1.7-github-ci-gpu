@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: cern-nextgen
+    runs-on: cern-nextgen-trfms-runner-7gmwb
 
     steps:
     - name: Checkout
