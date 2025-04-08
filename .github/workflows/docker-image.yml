@@ -5,10 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: cern-nextgen
-    container:
-      image: ghcr.io/catthehacker/ubuntu:act-latest
-      options: --privileged -v /var/run/docker.sock:/var/run/docker.sock
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
