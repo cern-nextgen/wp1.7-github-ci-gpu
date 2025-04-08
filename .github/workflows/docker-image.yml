@@ -8,24 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-      
-    - name: Login to private registry
+    - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
-        registry: ${{ secrets.REGISTRY_URL }}
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-
+        username: ${{ vars.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - uses: actions/checkout@v4
     - name: Build the Docker image
-      uses: docker/build-push-action@v6
-      with:
-        file: Dockerfile
-        builder: ${{ steps.buildx.outputs.name }}
-        push: true
-        tags: '${{ secrets.REGISTRY_URL }}/ngt-wp1.7/wp1.7-github-ci-gpu:latest'
-
+      run: |
+        docker build . --file Dockerfile --tag oliverrietmann/wp1.7-github-ci-gpu:latest
+        docker push oliverrietmann/wp1.7-github-ci-gpu:latest
