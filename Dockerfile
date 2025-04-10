@@ -1,4 +1,4 @@
-FROM registry.cern.ch/docker.io/rochaporto/gpu_burn
+FROM registry.cern.ch/ngt-wp1.7/gpu_burn:latest
 
 WORKDIR /root
 
