@@ -1,4 +1,4 @@
-FROM docker.io/oliverrietmann/gpu_burn:latest
+FROM registry.cern.ch/docker.io/rochaporto/gpu_burn
 
 WORKDIR /root
 
