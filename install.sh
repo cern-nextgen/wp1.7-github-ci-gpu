@@ -5,7 +5,7 @@ apt-get -y update
 DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential libtool autoconf unzip git libssl-dev gcc-10 g++-10 clang-18 cuda-nvcc-12-8
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
-git clone --depth 1 --branch v4.0.1 https://github.com/Kitware/CMake
+git clone --depth 1 --branch v4.0.1 https://github.com/Kitware/CMake.git
 cd CMake 
 ./bootstrap
 make
