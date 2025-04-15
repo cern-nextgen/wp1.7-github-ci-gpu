@@ -12,4 +12,5 @@ make
 make install
 cd ..
 rm -rf CMake
+apt-get clean
 
