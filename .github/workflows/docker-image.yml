@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker image wp1.7-soa-wrapper
 
 on:
   workflow_dispatch:
@@ -27,5 +27,5 @@ jobs:
         file: Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags: '${{ secrets.REGISTRY_URL }}/ngt-wp1.7/wp1.7-github-ci-gpu:latest'
+        tags: '${{ secrets.REGISTRY_URL }}/ngt-wp1.7/wp1.7-soa-wrapper:latest'
 
