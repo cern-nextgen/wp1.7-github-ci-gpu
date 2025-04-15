@@ -1,4 +1,4 @@
-name: Docker image wp1.7-soa-wrapper
+name: wp1.7-soa-wrapper:latest
 
 on:
   workflow_dispatch:
