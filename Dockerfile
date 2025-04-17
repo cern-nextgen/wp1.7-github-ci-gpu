@@ -1,4 +1,4 @@
-FROM docker.io/nvidia/cuda:12.8.1-base-ubi9
+FROM registry.cern.ch/docker.io/nvidia/cuda:12.8.1-base-ubi9
 
 WORKDIR /root
 
